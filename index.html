@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+
+        <title>
+            Reciclagem!
+        </title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+
+        <!-- CSS Reset -->
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css"/>
+
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        <!-- FontAwesome Functionality -->
+        <script src="https://kit.fontawesome.com/c1cd3c0b1b.js" crossorigin="anonymous"></script>
+
+        <!-- Customized CSS for this page -->
+        <link rel="stylesheet" href="https://henryrabelo.github.io/Portfolio/assets/css/global.css"/>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+
+        <!-- Customized JS for this page -->
+        <script type="text/javascript" src="assets/js/matrix.js"></script>
+        <script type="text/javascript" src="assets/js/mechanics.js"></script>
+        <script type="text/javascript">
+            var grassSprite = new Image();
+            grassSprite.src = "assets/img/grass.png";
+
+            var paperSprite = new Image();
+            paperSprite.src = "assets/img/paper.png";
+
+            var plasticSprite = new Image();
+            plasticSprite.src = "assets/img/plastic.png";
+
+            var glassSprite = new Image();
+            glassSprite.src = "assets/img/glass.png";
+
+            var metalSprite = new Image();
+            metalSprite.src = "assets/img/metal.png";
+
+            var charSprite = new Image();
+            charSprite.src = "assets/img/sanic.png";
+
+            var charSprite2 = new Image();
+            charSprite2.src = "assets/img/sanic1.png";
+        </script>
+
+    </head>
+
+    <body class="bg-light" onload="startGame();">
+
+        <nav  id="navbar" class="navbar sticky-top navbar-dark bg-dark border-bottom shadow-sm justify-content-between">
+            <a class="text-white text-decoration-none" href="https://henryrabelo.github.io/Portfolio">
+                <h3 class="my-0 mr-md-auto font-weight-normal"> Henry Rabelo </h3>
+            </a>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-white" href="#"> Projetos </a>
+                <a class="p-2 text-white" href="#"> Contato </a>
+                <a class="p-2 text-white" href="https://henryrabelo.github.io/Portfolio/curriculum.html"> Curriculum Vitae </a>
+
+                <a class="btn btn-outline-light" href="mailto:henry.rabelo@protonmail.com" target="blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+                <a class="btn btn-outline-light" href="https://github.com/HenryRabelo" target="blank">
+                    <i class="fab fa-github-alt"></i>
+                </a>
+
+                <a class="btn btn-outline-light" href="https://www.linkedin.com/in/henrique-rabelo-49764817b" target="blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+            </nav>
+        </nav>
+
+        <div id="banner" class="banner">
+
+            <!-- Banner is handled through CSS -->
+
+        </div>
+
+        <div id="content" class="container p-3">
+
+            <div class="container text-center p-5">
+
+                <div id="app-view" class="card shadow-sm mx-auto">
+                    <div class="card-header text-center">
+
+                        <div class="row justify-content-end">
+                            <div class="col">
+                                <h4 id="levelTimer"> Teste sua Velocidade! </h4>
+                            </div>
+                            <div class="col-auto">
+                                <a class="btn btn-outline-secondary" href="javascript:void(0)" onclick="reload();">
+                                    <i class="fas fa-redo"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-body">
+
+                        <canvas id="canvas" class="p-4" width="300" height="300"> Navegador sem suporte </canvas>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="spacing" class="container">
+                <hr class="mb-4">
+            </div>
+
+            <div class="row">
+
+                <div id="left-col" class="col pr-5">
+
+                    <div id="card" class="card shadow-sm">
+                        <h4 class="card-header text-center"> Sobre </h4>
+                        <div class="card-body">
+                            <p class="card-text text-justify">
+                                Meu nome é Henrique Rabelo, tenho 21 anos e estou cursando Ciências da Computação,
+                                na faculdade PUC Minas, campus de Poços de Caldas.
+                            </p>
+                            <p class="card-text text-justify">
+                                Desde pequeno, eu sempre gostei de obter conhecimento e desmontar coisas como brinquedos e equipamentos,
+                                para entender como eles funcionavam. Além disso, eu sempre gostei de ter uma maneira sistemática de fazer as coisas.
+                            </p>
+                            <p class="card-text text-justify">
+                                Sinta-se à vontade para ver meus projetos realizados ou obter uma cópia do
+                                meu Curriculum Vitae e cartão de visitas.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="right-col" class="col pl-5">
+                    <img id="about-workstation" class="rounded mx-auto d-block" src="https://henryrabelo.github.io/Portfolio/assets/img/workstation-preview.png" alt="Minha Área de Trabalho de Escolha">
+                </div>
+
+            </div>
+
+            <div id="spacing" class="container">
+                <hr class="mb-4">
+            </div>
+
+            <div class="row">
+
+                <div class="col">
+                    <div class="container pt-2 pb-5">
+                        <h2> Explore: </h2>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div id="left-col" class="col">
+
+                    <div class="card mx-auto shadow-sm" style="width: 18rem;">
+                        <img src="https://henryrabelo.github.io/Portfolio/assets/img/thumbnail/project.png" class="card-img-top" alt="Projetos">
+                        <div class="card-body">
+                            <h4 class="card-title"> Veja meus projetos </h4>
+                            <p class="card-text"> Veja alguns de meus projetos feitos para demonstração. </p>
+                            <a href="#" class="btn btn-primary d-block stretched-link"> Projetos </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="middle-col" class="col">
+
+                    <div class="card mx-auto shadow-sm" style="width: 18rem;">
+                        <img src="https://henryrabelo.github.io/Portfolio/assets/img/thumbnail/project.png" class="card-img-top" alt="Contato">
+                        <div class="card-body">
+                            <h4 class="card-title"> Entre em contato </h4>
+                            <p class="card-text"> Veja por quais meios é possível entrar em contato comigo. </p>
+                            <a href="#" class="btn btn-primary d-block stretched-link"> Contato </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="right-col" class="col">
+
+                    <div class="card mx-auto shadow-sm" style="width: 18rem;">
+                        <img src="https://henryrabelo.github.io/Portfolio/assets/img/thumbnail/curriculum-thumbnail.png" class="card-img-top" alt="Curriculum Vitae">
+                        <div class="card-body">
+                            <h4 class="card-title"> Veja meu Curriculum </h4>
+                            <p class="card-text"> Veja o meu Curriculum completo! Estou disponível para contratação. </p>
+                            <a href="https://henryrabelo.github.io/Portfolio/curriculum.html" class="btn btn-primary d-block stretched-link"> Curriculum Vitae </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer id="footer" class="my-5 p-5 text-muted text-center text-small border-top">
+            <p class="mb-1"> Desenvolvido por Henry Rabelo </p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#"> Projetos </a></li>
+                <li class="list-inline-item"><a href="https://github.com/HenryRabelo"> Github </a></li>
+                <li class="list-inline-item"><a href="https://www.linkedin.com/in/henrique-rabelo-49764817b"> Linkedin </a></li>
+            </ul>
+        </footer>
+
+    </body>
+</html>
