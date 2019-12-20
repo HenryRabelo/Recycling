@@ -72,9 +72,9 @@ function endGame() {
     for (x = 0; x < tamanhoMatriz; x++)
         for (y = 0; y < tamanhoMatriz; y++) {
             if (matriz[x][y] == 1 || matriz[x][y] == 2 || matriz[x][y] == 3 || matriz[x][y] == 4)
-                return alert("You Lost...");
+                return alert("Você perdeu...");
         }
-    return alert("You Won!");
+    return alert("Você venceu!");
 }
 
 function clear() {
