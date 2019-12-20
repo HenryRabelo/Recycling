@@ -14,6 +14,9 @@
         <!-- CSS Reset -->
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css"/>
 
+        <!-- JQuery Functionality -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+
         <!-- Bootstrap Core CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
 
@@ -27,6 +30,7 @@
         <!-- Customized JS for this page -->
         <script type="text/javascript" src="assets/js/matrix.js"></script>
         <script type="text/javascript" src="assets/js/mechanics.js"></script>
+        <script type="text/javascript" src="https://henryrabelo.github.io/Portfolio/assets/js/jq-include.js"></script>
         <script type="text/javascript">
             var grassSprite = new Image();
             grassSprite.src = "assets/img/grass.png";
@@ -44,45 +48,17 @@
             metalSprite.src = "assets/img/metal.png";
 
             var charSprite = new Image();
-            charSprite.src = "assets/img/sanic.png";
+            charSprite.src = "assets/img/kit_stand.png";
 
             var charSprite2 = new Image();
-            charSprite2.src = "assets/img/sanic1.png";
+            charSprite2.src = "assets/img/kit_walk.png";
         </script>
 
     </head>
 
     <body class="bg-light" onload="startGame();">
 
-        <nav  id="navbar" class="navbar sticky-top navbar-dark bg-dark border-bottom shadow-sm justify-content-between">
-            <a class="text-white text-decoration-none" href="https://henryrabelo.github.io/Portfolio">
-                <h3 class="my-0 mr-md-auto font-weight-normal"> Henry Rabelo </h3>
-            </a>
-            <nav class="my-2 my-md-0 mr-md-3">
-                <a class="p-2 text-white" href="#"> Projetos </a>
-                <a class="p-2 text-white" href="#"> Contato </a>
-                <a class="p-2 text-white" href="https://henryrabelo.github.io/Portfolio/curriculum.html"> Curriculum Vitae </a>
-
-                <a class="btn btn-outline-light" href="mailto:henry.rabelo@protonmail.com" target="blank">
-                    <i class="fas fa-envelope"></i>
-                </a>
-
-                <a class="btn btn-outline-light" href="https://github.com/HenryRabelo" target="blank">
-                    <i class="fab fa-github-alt"></i>
-                </a>
-
-                <a class="btn btn-outline-light" href="https://www.linkedin.com/in/henrique-rabelo-49764817b" target="blank">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-
-            </nav>
-        </nav>
-
-        <div id="banner" class="banner">
-
-            <!-- Banner is handled through CSS -->
-
-        </div>
+        <div data-include="https://henryrabelo.github.io/Portfolio/assets/includes/header-dark.html"></div>
 
         <div id="content" class="container p-3">
 
@@ -116,35 +92,7 @@
                 <hr class="mb-4">
             </div>
 
-            <div class="row">
-
-                <div id="left-col" class="col pr-5">
-
-                    <div id="card" class="card shadow-sm">
-                        <h4 class="card-header text-center"> Sobre </h4>
-                        <div class="card-body">
-                            <p class="card-text text-justify">
-                                Meu nome é Henrique Rabelo, tenho 21 anos e estou cursando Ciências da Computação,
-                                na faculdade PUC Minas, campus de Poços de Caldas.
-                            </p>
-                            <p class="card-text text-justify">
-                                Desde pequeno, eu sempre gostei de obter conhecimento e desmontar coisas como brinquedos e equipamentos,
-                                para entender como eles funcionavam. Além disso, eu sempre gostei de ter uma maneira sistemática de fazer as coisas.
-                            </p>
-                            <p class="card-text text-justify">
-                                Sinta-se à vontade para ver meus projetos realizados ou obter uma cópia do
-                                meu Curriculum Vitae e cartão de visitas.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div id="right-col" class="col pl-5">
-                    <img id="about-workstation" class="rounded mx-auto d-block" src="https://henryrabelo.github.io/Portfolio/assets/img/workstation-preview.png" alt="Minha Área de Trabalho de Escolha">
-                </div>
-
-            </div>
+            <div data-include="https://henryrabelo.github.io/Portfolio/assets/includes/info.html"></div>
 
             <div id="spacing" class="container">
                 <hr class="mb-4">
@@ -165,11 +113,11 @@
                 <div id="left-col" class="col">
 
                     <div class="card mx-auto shadow-sm" style="width: 18rem;">
-                        <img src="https://henryrabelo.github.io/Portfolio/assets/img/thumbnail/project.png" class="card-img-top" alt="Projetos">
+                        <img src="https://henryrabelo.github.io/Portfolio/assets/img/thumbnail/projects-thumbnail.png" class="card-img-top" alt="Projetos">
                         <div class="card-body">
                             <h4 class="card-title"> Veja meus projetos </h4>
                             <p class="card-text"> Veja alguns de meus projetos feitos para demonstração. </p>
-                            <a href="#" class="btn btn-primary d-block stretched-link"> Projetos </a>
+                            <a href="https://henryrabelo.github.io/Portfolio/projects.html" class="btn btn-primary d-block stretched-link"> Projetos </a>
                         </div>
                     </div>
 
@@ -205,14 +153,7 @@
 
         </div>
 
-        <footer id="footer" class="my-5 p-5 text-muted text-center text-small border-top">
-            <p class="mb-1"> Desenvolvido por Henry Rabelo </p>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#"> Projetos </a></li>
-                <li class="list-inline-item"><a href="https://github.com/HenryRabelo"> Github </a></li>
-                <li class="list-inline-item"><a href="https://www.linkedin.com/in/henrique-rabelo-49764817b"> Linkedin </a></li>
-            </ul>
-        </footer>
+        <div data-include="https://henryrabelo.github.io/Portfolio/assets/includes/footer.html"></div>
 
     </body>
 </html>
